@@ -5,6 +5,12 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    test: '123',
+    filter: {
+      query: {
+        level1: 'tests123'
+      },
+    },
   },
   mutations: {
   },

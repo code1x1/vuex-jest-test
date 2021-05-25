@@ -29,14 +29,24 @@
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
+    <div id="special">
+      {{ queryLevel1 }}
+    </div>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+	computed: {
+		...mapState({
+			queryLevel1: state => state.filter.query.level1,
+		}),
   }
 }
 </script>
